@@ -1,10 +1,12 @@
 import java.util.Scanner;
-
-import All_Classes.Employee;
+import java.lang.*;
+import Interfaces.*;
+import All_Classes.*;
 
 public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        Bank b = new Bank();
         boolean choice = true;
         System.out.println("\n\nWELCOME TO SIMPLE BANK MANAGEMENT SYSTEM\n");
 
@@ -47,6 +49,7 @@ public class Main {
                             emp.SetEmployeeId(emid);
                             emp.SetEmployeeName(emname);
                             emp.SetEmployeeSalary(emsalary);
+                            b.insertEmployee(emp);
 
                             break;
 
