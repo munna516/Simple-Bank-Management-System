@@ -9,7 +9,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Bank b = new Bank();
         boolean choice = true;
-        System.out.println("\n\nWELCOME TO SIMPLE BANK MANAGEMENT SYSTEM\n");
+        System.out.println("\n\n                                   WELCOME TO SIMPLE BANK MANAGEMENT SYSTEM\n");
 
         while (choice) {
             System.out.println("Here Are Some Option-\n");
@@ -34,35 +34,33 @@ public class Main {
                         case 1:
                             System.out.println("You Have Selected Create a New Employee\n");
                             System.out.print("Enter Employee Id : ");
-                            String emid = input.nextLine();
-
-                            String ch1 = input.nextLine();
+                            String emid = input.next();
 
                             System.out.print("Enter Employee Name : ");
-                            String emname = input.nextLine();
+                            String emname = input.next();
 
                             System.out.print("Enter Employee Salary : ");
                             double emsalary = input.nextDouble();
 
-                            String ch2 = input.nextLine();
-
-                            Employee emp = new Employee();
-                            emp.SetEmployeeId(emid);
-                            emp.SetEmployeeName(emname);
-                            emp.SetEmployeeSalary(emsalary);
-                            b.insertEmployee(emp);
+                            Employee e = new Employee();
+                            e.SetEmployeeId(emid);
+                            e.SetEmployeeName(emname);
+                            e.SetEmployeeSalary(emsalary);
+                            b.insertEmployee(e);
 
                             break;
 
                         case 2:
                             System.out.println("You Have Selected to Remove an Employee\n");
                             System.out.print("Enter Employee Id : ");
-                            String id1 = input.nextLine();
+                            String id1 = input.next();
+                            b.removeEmployee(b.getEmployee(id1));
 
                             break;
 
                         case 3:
                             System.out.println("You Have Selected to See All Employee\n");
+                            b.showAllEmployees();
                             break;
 
                         case 4:
@@ -94,6 +92,8 @@ public class Main {
 
                             System.out.print("Enter Customer Name : ");
                             String name1 = input.nextLine();
+                            Customer c = new Customer();
+                            // b.insertCustomer(c);
                             break;
                         case 2:
                             System.out.println("You Have Selected to Remove a Customer\n");
