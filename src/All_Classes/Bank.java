@@ -65,5 +65,63 @@ public class Bank {
 
         System.out.println("************************************");
     }
-
+    public void insertCustomer(Customer c) {
+        int flag = 0;
+        for (int i = 0; i < customers.length; i++) {
+          if (customers[i] == null) {
+            customers[i] = c;
+            flag = 1;
+            break;
+          }
+        }
+        if (flag == 1) {
+          System.out.println("Customer Inserted");
+        } else {
+          System.out.println("Can Not Insert");
+        }
+      }
+    
+      public void removeCustomer(Customer c) {
+        int flag = 0;
+        for (int i = 0; i < customers.length; i++) {
+          if (customers[i] == c) {
+            customers[i] = null;
+            flag = 1;
+            break;
+          }
+        }
+      }
+    
+      public void showAllCustomers() {
+        System.out.println("**********************************");
+        for (Customer c : customers) {
+          if (c != null) {
+            
+            System.out.println("Customer Name: " + c.getName());
+            System.out.println("Customer NID: " + c.getNid());
+            System.out.println("\n");  
+          }
+        }
+        System.out.println("**********************************");
+      }
+    
+      public Customer getCustomer(int nid) {
+        Customer c = null;
+    
+        for (int i = 0; i < customers.length; i++) {
+          if (customers[i] != null) {
+            if (customers[i].getNid() == nid) {
+              c = customers[i];
+              break;
+            }
+          }
+        }
+        if (c != null) {
+          System.out.println("Customer Found & Removed");
+        } else {
+          System.out.println("Customer Not Found & Cannot Remove");
+        }
+        return c;
+      }
+    }
     
