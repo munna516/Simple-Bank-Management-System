@@ -120,15 +120,15 @@ public class Main {
                 case 3:
                     System.out.println("You Have Selected Customer Account Management\n");
                     System.out.println("Here are some option-\n");
-                    System.out.println("	1. Create New Account for a Customer");
-                    System.out.println("	2. Remove Account of a Customer");
-                    System.out.println("	3. See all Accounts of a Customer");
-                    System.out.println("	4. Go Back\n");
+                    System.out.println("  1. Create New Account for a Customer");
+                    System.out.println("  2. Remove Account of a Customer");
+                    System.out.println("  3. See all Accounts of a Customer");
+                    System.out.println("  4. Go Back\n");
                     System.out.print(">>> Enter a Option : ");
                     int second3 = input.nextInt();
                     switch (second3) {
                         case 1:
-                            // Account a = NULL;
+                            Account a = null;
 
                             System.out.println("There are two types of Account\n");
                             System.out.println("     1. Savings Account");
@@ -136,6 +136,7 @@ public class Main {
                             System.out.println("     3. Go Back\n");
                             System.out.print(">>> Enter a Option : ");
                             int actype = input.nextInt();
+
                             // Generating Random Account Number
                             int an1 = (int) (Math.random() * (9999 - 999 + 1) + 999);
                             System.out.print("Enter Opening Balance: ");
@@ -144,10 +145,29 @@ public class Main {
                             if (actype == 1) {
                                 System.out.print("Enter Interest Rate: ");
                                 double ir = input.nextDouble();
+                                SavingsAccount sa = new SavingsAccount();
+                                sa.setAccountNumber(an1);
+                                sa.setBalance(ob1);
+                                //sa.setInterestRate(ir);
+                                a = sa;
                             } else if (actype == 2) {
                                 System.out.print("Enter Expired Year: ");
                                 int ex = input.nextInt();
+                                FixedAccount fa = new FixedAccount();
+                                fa.setAccountNumber(an1);
+                                fa.setBalance(ob1);
+                               // fa.setTenureYear(ex);
 
+                                a = fa;
+
+                            } else {
+                                System.out.println("Invalid Input");
+                            }
+                            if (a != null) {
+                                System.out.print("Enter Customer Nid: ");
+                                int nid = input.nextInt();
+                                //b.getCustomer(nid).insertAccount(a);
+                                System.out.println("Your Account Number is : " + an1);
                             }
 
                             break;
@@ -155,7 +175,7 @@ public class Main {
                         case 2:
                             System.out.println("You Have Selected to Remove Account of a Customer\n");
                             System.out.print("Enter Customer Nid: ");
-                            int nid2 = input.nextInt();
+                            int nid3 = input.nextInt();
                             System.out.print("Enter Account Number: ");
                             int an2 = input.nextInt();
                             break;
@@ -179,20 +199,43 @@ public class Main {
                     System.out.println("     1. Deposit Money");
                     System.out.println("     2. Withdraw Money");
                     System.out.println("     3. Transfer Money");
-                    System.out.println("     4. Show Transaction History");
-                    System.out.println("     5. Go Back\n");
+                    System.out.println("     4. Go Back\n");
                     System.out.print(">>> Enter a Option : ");
                     int second4 = input.nextInt();
                     switch (second4) {
                         case 1:
+                            System.out.print("Enter Customer Nid: ");
+                            int nid4 = input.nextInt();
+                            System.out.print("Enter Account Number: ");
+                            int an2 = input.nextInt();
+                            System.out.print("Enter Deposit Amount: ");
+                            double amount1 = input.nextDouble();
                             break;
                         case 2:
+                            System.out.print("Enter Customer Nid: ");
+                            int nid5 = input.nextInt();
+                            System.out.print("Enter Account Number: ");
+                            int an3 = input.nextInt();
+                            System.out.print("Enter Withdraw Amount: ");
+                            double amount2 = input.nextDouble();
                             break;
                         case 3:
+                            System.out.print("Enter Sending Customer Nid: ");
+                            int NIDS = input.nextInt();
+                            System.out.print("Enter Sending Account Number: ");
+                            int ANS = input.nextInt();
+                            System.out.print("Enter Transfer Amount: ");
+                            double amount3 = input.nextDouble();
+                            System.out.print("Enter Receiving Customer Nid: ");
+                            int NIDR = input.nextInt();
+                            System.out.print("Enter Receiving Account Number: ");
+                            int ANR = input.nextInt();
                             break;
                         case 4:
+                            System.out.println("Going Back...");
                             break;
                         default:
+                            System.out.println("Invalid Input");
                             break;
                     }
                 case 5:

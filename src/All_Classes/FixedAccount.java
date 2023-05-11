@@ -1,5 +1,7 @@
 package All_Classes;
 
-public class FixedAccount {
+import java.lang.*;
+
+public class FixedAccount extends Account {
     
 }

@@ -1,5 +1,5 @@
 package All_Classes;
 
-public class SavingsAccount {
+public class SavingsAccount extends Account {
     
 }
