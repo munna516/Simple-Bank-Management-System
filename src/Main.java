@@ -4,7 +4,6 @@ import Interfaces.*;
 import All_Classes.*;
 
 public class Main {
-    // My commit
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Bank b = new Bank();
@@ -87,25 +86,30 @@ public class Main {
                             System.out.println("You Have Selected Create a New Customer\n");
                             System.out.print("Enter Customer NID : ");
                             int nid1 = input.nextInt();
-
-                            String ch3 = input.nextLine();
-
                             System.out.print("Enter Customer Name : ");
-                            String name1 = input.nextLine();
+                            String name1 = input.next();
                             Customer c = new Customer();
-                            // b.insertCustomer(c);
+                            c.setName(name1);
+                            c.setNid(nid1);
+                            b.insertCustomer(c);
                             break;
+
                         case 2:
                             System.out.println("You Have Selected to Remove a Customer\n");
                             System.out.print("Enter Customer NID : ");
                             int nid2 = input.nextInt();
+                            b.removeCustomer(b.getCustomer(nid2));
                             break;
+
                         case 3:
                             System.out.println("You Have Selected to See All Customer\n");
+                            b.showAllCustomers();
                             break;
+
                         case 4:
                             System.out.println("Going Back...");
                             break;
+
                         default:
                             System.out.println("Invalid Input");
                             break;

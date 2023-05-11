@@ -31,13 +31,6 @@ public class Bank {
                 break;
             }
         }
-        // if (flag == 1) {
-        // System.out.println(" & Employee Removed");
-        // }
-
-        // else {
-        // System.out.println(" & Can Not Remove");
-        // }
     }
 
     public Employee getEmployee(String empId) {
@@ -72,4 +65,5 @@ public class Bank {
 
         System.out.println("************************************");
     }
-}
+
+    
