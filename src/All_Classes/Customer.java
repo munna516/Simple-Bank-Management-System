@@ -21,19 +21,62 @@ public class Customer {
     return nid;
   }
 
-  // public void insertAccount(Account a) {
-  //   int flag = 0;
-  //   for (int i = 0; i < accounts.length; i++) {
-  //     if (accounts[i] == null) {
-  //       accounts[i] = a;
-  //       flag = 1;
-  //       break;
-  //     }
-  //   }
-  //   if (flag == 1) {
-  //     System.out.println("Account Inserted");
-  //   } else {
-  //     System.out.println("Can Not Insert");
-  //   }
-  // }
+  public void insertAccount(Account a) {
+    int flag = 0;
+    for (int i = 0; i < accounts.length; i++) {
+      if (accounts[i] == null) {
+        accounts[i] = a;
+        flag = 1;
+        break;
+      }
+    }
+    if (flag == 1) {
+      System.out.println("Account Inserted");
+    } else {
+      System.out.println("Can Not Insert");
+    }
+  }
+
+  public void removeAccount(Account a) {
+    int flag = 0;
+    for (int i = 0; i < accounts.length; i++) {
+      if (accounts[i] == a) {
+        accounts[i] = null;
+        flag = 1;
+        break;
+      }
+    }
+    if (flag == 1) {
+      System.out.println("Account Removed");
+    } else {
+      System.out.println("Can Not Remove");
+    }
+  }
+
+  public void showAllAccounts() {
+    for (Account a : accounts) {
+      if (a != null) {
+        a.showInfo();
+      }
+    }
+  }
+
+  public Account getAccount(int accountNumber) {
+    Account a = null;
+
+    for (int i = 0; i < accounts.length; i++) {
+      if (accounts[i] != null) {
+        if (accounts[i].getAccountNumber() == accountNumber) {
+          a = accounts[i];
+          break;
+        }
+      }
+    }
+    if (a != null) {
+      System.out.println("Account Found\n");
+    } else {
+      System.out.println("Account Not Found\n");
+    }
+    return a;
+  }
 }
