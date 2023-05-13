@@ -1,7 +1,5 @@
 package All_Classes;
 
-import java.lang.*;
-
 public class Bank {
     private Employee employees[] = new Employee[50];
     private Customer customers[] = new Customer[500];

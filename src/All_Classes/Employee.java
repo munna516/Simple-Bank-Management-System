@@ -1,7 +1,5 @@
 package All_Classes;
 
-import java.lang.*;
-
 public class Employee {
     private String emid;
     private String emname;

@@ -1,5 +1,4 @@
 package All_Classes;
-
 import Interfaces.Transaction;
 
 public abstract class Account implements Transaction {

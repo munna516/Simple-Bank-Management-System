@@ -1,6 +1,5 @@
+package MainClass;
 import java.util.Scanner;
-import java.lang.*;
-import Interfaces.*;
 import All_Classes.*;
 
 public class Main {
@@ -262,6 +261,6 @@ public class Main {
             }
 
         }
-
+       input.close();
     }
 }
