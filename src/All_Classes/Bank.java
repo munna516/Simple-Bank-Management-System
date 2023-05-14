@@ -115,9 +115,9 @@ public class Bank {
           }
         }
         if (c != null) {
-          System.out.println("\nCustomer Found & Removed\n");
+          System.out.println("\nCustomer Found\n");
         } else {
-          System.out.println("\nCustomer Not Found & Cannot Remove\n");
+          System.out.println("\nCustomer Not Found\n");
         }
         return c;
       }

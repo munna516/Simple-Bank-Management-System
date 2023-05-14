@@ -29,7 +29,7 @@ public class Main {
                     int second1 = input.nextInt();
                     switch (second1) {
                         case 1:
-
+                        System.out.println("You Have Selected to Create New Employee\n");
                             System.out.print("Enter Employee Id       : ");
 
                             String emid = input.next();
@@ -49,7 +49,7 @@ public class Main {
                             break;
 
                         case 2:
-
+                        System.out.println("You Have Selected to Remove Employee\n");
                             System.out.print("Enter Employee Id       : ");
                             String id1 = input.next();
                             b.removeEmployee(b.getEmployee(id1));
@@ -57,7 +57,7 @@ public class Main {
                             break;
 
                         case 3:
-
+                        System.out.println("You Have Selected to Show All Employee\n");
                             b.showAllEmployees();
                             break;
 
