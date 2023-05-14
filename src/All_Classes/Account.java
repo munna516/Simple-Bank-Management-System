@@ -30,7 +30,7 @@ public abstract class Account implements Transaction {
             balance += amount;
             System.out.println("Current Balance: " + balance);
         } else {
-            System.out.println("Can Not Deposit\n");
+            System.out.println("\nCan Not Deposit\n");
         }
     }
 
@@ -41,7 +41,7 @@ public abstract class Account implements Transaction {
             balance -= amount;
             System.out.println("Current Balance:  " + balance);
         } else {
-            System.out.println("Insufficient Balance\n");
+            System.out.println("\nInsufficient Balance\n");
         }
     }
 
@@ -53,7 +53,7 @@ public abstract class Account implements Transaction {
             a.balance = a.balance + amount;
             System.out.println("Current Balance:  " + this.balance);
         } else {
-            System.out.println("Insufficient Balance & Can Not Transfer\n");
+            System.out.println("\nInsufficient Balance & Can Not Transfer\n");
         }
     }
 }

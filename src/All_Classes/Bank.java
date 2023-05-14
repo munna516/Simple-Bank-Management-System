@@ -14,9 +14,9 @@ public class Bank {
             }
         }
         if (flag == 1) {
-            System.out.println("Employee Inserted");
+            System.out.println("\nEmployee Inserted\n");
         } else {
-            System.out.println("Can Not Insert");
+            System.out.println("\nCan Not Insert\n");
         }
     }
 
@@ -43,9 +43,9 @@ public class Bank {
             }
         }
         if (e != null) {
-            System.out.println("Employee Found & Removed");
+            System.out.println("\nEmployee Found & Removed\n");
         } else {
-            System.out.println("Employee Not Found & Can Not Remove");
+            System.out.println("\nEmployee Not Found & Can Not Removed\n");
         }
         return e;
     }
@@ -73,9 +73,9 @@ public class Bank {
           }
         }
         if (flag == 1) {
-          System.out.println("Customer Inserted");
+          System.out.println("\nCustomer Inserted\n");
         } else {
-          System.out.println("Can Not Insert");
+          System.out.println("\nCan Not Insert\n");
         }
       }
     
@@ -115,9 +115,9 @@ public class Bank {
           }
         }
         if (c != null) {
-          System.out.println("Customer Found & Removed");
+          System.out.println("\nCustomer Found & Removed\n");
         } else {
-          System.out.println("Customer Not Found & Cannot Remove");
+          System.out.println("\nCustomer Not Found & Cannot Remove\n");
         }
         return c;
       }

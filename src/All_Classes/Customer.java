@@ -31,9 +31,9 @@ public class Customer {
       }
     }
     if (flag == 1) {
-      System.out.println("Account Inserted");
+      System.out.println("\nAccount Inserted\n");
     } else {
-      System.out.println("Can Not Insert");
+      System.out.println("\nCan Not Insert\n");
     }
   }
 
@@ -47,9 +47,9 @@ public class Customer {
       }
     }
     if (flag == 1) {
-      System.out.println("Account Removed");
+      System.out.println("\nAccount Removed\n");
     } else {
-      System.out.println("Can Not Remove");
+      System.out.println("\nCan Not Remove\n");
     }
   }
 
@@ -73,9 +73,9 @@ public class Customer {
       }
     }
     if (a != null) {
-      System.out.println("Account Found\n");
+      System.out.println("\nAccount Found\n");
     } else {
-      System.out.println("Account Not Found\n");
+      System.out.println("\nAccount Not Found\n");
     }
     return a;
   }
