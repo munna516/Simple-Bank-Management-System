@@ -7,7 +7,7 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Bank b = new Bank();
         boolean choice = true;
-        System.out.println("\n\n                                   WELCOME TO SIMPLE BANK MANAGEMENT SYSTEM\n");
+        System.out.println("\n\n                                  WELCOME TO SIMPLE BANK MANAGEMENT SYSTEM\n");
 
         while (choice) {
             System.out.println("Here Are Some Option of Our Bank-\n");
