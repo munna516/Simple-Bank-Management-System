@@ -183,7 +183,6 @@ public class Main {
                         case 3:
                             System.out.println("You Have Selected to See All Accounts of Customer\n");
                             System.out.print("Enter Customer Nid      : ");
-                            ;
                             int Nid3 = input.nextInt();
 
                             b.getCustomer(Nid3).showAllAccounts();
