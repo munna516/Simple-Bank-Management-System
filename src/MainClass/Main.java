@@ -31,7 +31,6 @@ public class Main {
                         case 1:
                         System.out.println("You Have Selected to Create New Employee\n");
                             System.out.print("Enter Employee Id       : ");
-
                             String emid = input.next();
 
                             System.out.print("Enter Employee Name     : ");
@@ -45,7 +44,6 @@ public class Main {
                             e.SetEmployeeName(emname);
                             e.SetEmployeeSalary(emsalary);
                             b.insertEmployee(e);
-
                             break;
 
                         case 2:
@@ -53,7 +51,6 @@ public class Main {
                             System.out.print("Enter Employee Id       : ");
                             String id1 = input.next();
                             b.removeEmployee(b.getEmployee(id1));
-
                             break;
 
                         case 3:
@@ -85,8 +82,10 @@ public class Main {
                             System.out.println("You Have Selected Create a New Customer\n");
                             System.out.print("Enter Customer NID      : ");
                             int nid1 = input.nextInt();
+
                             System.out.print("Enter Customer Name     : ");
                             String name1 = input.next();
+
                             Customer c = new Customer();
                             c.setName(name1);
                             c.setNid(nid1);
@@ -97,6 +96,7 @@ public class Main {
                             System.out.println("You Have Selected to Remove a Customer\n");
                             System.out.print("Enter Customer NID      : ");
                             int nid2 = input.nextInt();
+
                             b.removeCustomer(b.getCustomer(nid2));
                             break;
 
@@ -143,6 +143,7 @@ public class Main {
                             if (actype == 1) {
                                 System.out.print("Enter Interest Rate     : ");
                                 double ir = input.nextDouble();
+
                                 SavingsAccount sa = new SavingsAccount();
                                 sa.setAccountNumber(an1);
                                 sa.setBalance(ob1);
@@ -151,8 +152,8 @@ public class Main {
 
                             } else if (actype == 2) {
                                 System.out.print("Enter Expired Year      : ");
-
                                 int ex = input.nextInt();
+
                                 FixedAccount fa = new FixedAccount();
                                 fa.setAccountNumber(an1);
                                 fa.setBalance(ob1);
@@ -165,6 +166,7 @@ public class Main {
                             if (a != null) {
                                 System.out.print("Enter Customer Nid      : ");
                                 int nid = input.nextInt();
+
                                 b.getCustomer(nid).insertAccount(a);
                                 System.out.println("Your Account Number is  : " + an1);
                             }
@@ -175,8 +177,10 @@ public class Main {
                             System.out.println("You Have Selected to Remove Account of a Customer\n");
                             System.out.print("Enter Customer Nid      : ");
                             int nid3 = input.nextInt();
+
                             System.out.print("Enter Account Number    : ");
                             int an2 = input.nextInt();
+
                             b.getCustomer(nid3).removeAccount(b.getCustomer(nid3).getAccount(an2));
                             break;
 
@@ -187,6 +191,7 @@ public class Main {
 
                             b.getCustomer(Nid3).showAllAccounts();
                             break;
+
                         case 4:
 
                             System.out.println("Going Back...\n");
@@ -197,6 +202,7 @@ public class Main {
                             break;
                     }
                     break;
+
                 case 4:
                     System.out.println("You have selected Account Transactions\n");
                     System.out.println("Here are Some Options- \n");
@@ -210,34 +216,45 @@ public class Main {
                         case 1:
                             System.out.print("Enter Customer Nid      : ");
                             int nid4 = input.nextInt();
+
                             System.out.print("Enter Account Number    : ");
                             int an2 = input.nextInt();
+
                             System.out.print("Enter Deposit Amount    : ");
                             double amount1 = input.nextDouble();
+
                             b.getCustomer(nid4).getAccount(an2).deposit(amount1);
                             break;
 
                         case 2:
                             System.out.print("Enter Customer Nid      : ");
                             int nid5 = input.nextInt();
+
                             System.out.print("Enter Account Number    : ");
                             int an3 = input.nextInt();
+
                             System.out.print("Enter Withdraw Amount   : ");
                             double amount2 = input.nextDouble();
+
                             b.getCustomer(nid5).getAccount(an3).withdraw(amount2);
                             break;
 
                         case 3:
                             System.out.print("Enter Sending Customer Nid     : ");
                             int NIDS = input.nextInt();
+
                             System.out.print("Enter Sending Account Number   : ");
                             int ANS = input.nextInt();
+
                             System.out.print("Enter Transfer Amount          : ");
                             double amount3 = input.nextDouble();
+
                             System.out.print("Enter Receiving Customer Nid   : ");
                             int NIDR = input.nextInt();
+
                             System.out.print("Enter Receiving Account Number : ");
                             int ANR = input.nextInt();
+                            
                             b.getCustomer(NIDS).getAccount(ANS).transfer(b.getCustomer(NIDR).getAccount(ANR), amount3);
                             break;
 
